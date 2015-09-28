@@ -8,8 +8,6 @@ Answers to some simple questions about how to handle dates and times across time
 Summary
 -------------
 
-0) From WWDC2013, watch [Solutions to Common Date and Time Challenges](https://developer.apple.com/videos/wwdc/2013/).
-
 1) Date AND time? Use NSDate.
 
 2) Time only? Use NSInteger.
@@ -20,7 +18,9 @@ Summary
 
 5) 6) 7) Comparing minutes/hours/days/weeks? Use  [NSCalendar components:fromDate:toDate:options](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSCalendar_Class/#//apple_ref/occ/instm/NSCalendar/components:fromDate:toDate:options:)
 
+8) Read [Ole Begemann's detailed post](http://oleb.net/blog/2011/11/working-with-date-and-time-in-cocoa-part-1/) about dates and times.
 
+9) From WWDC2013, watch [Solutions to Common Date and Time Challenges](https://developer.apple.com/videos/wwdc/2013/).
 
 
 1) What's the best option to store a time on a specific date?
