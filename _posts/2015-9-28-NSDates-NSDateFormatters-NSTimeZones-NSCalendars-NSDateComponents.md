@@ -3,9 +3,6 @@ layout: post
 title: NSDates, NSDateFormatters, NSTimeZones, NSCalendars and NSDateComponents. Oh my.
 ---
 
-NSDates, NSDateFormatters, NSTimeZones, NSCalendars and NSDateComponents. Oh my.
-==========================================================================
-
 Summary
 -------------
 
