@@ -3,6 +3,8 @@ layout: post
 title: NSDates, NSTimeZones, NSCalendars and NSDateComponents. Oh my.
 ---
 
+Answers to some simple questions about how to handle dates and times across timezones.
+
 Summary
 -------------
 
