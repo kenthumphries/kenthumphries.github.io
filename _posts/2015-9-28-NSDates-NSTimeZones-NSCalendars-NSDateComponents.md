@@ -1,6 +1,6 @@
 ---
 layout: post
-title: NSDates, NSDateFormatters, NSTimeZones, NSCalendars and NSDateComponents. Oh my.
+title: NSDates, NSTimeZones, NSCalendars and NSDateComponents. Oh my.
 ---
 
 Summary
