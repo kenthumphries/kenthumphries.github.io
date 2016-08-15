@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Protocol Extensions: The Bad, The Good, The Ugly
+title: Protocol Extensions - The Bad, The Good, The Ugly
 ---
 
 An experiment with protocol extensions that goes frustratingly wrong.
