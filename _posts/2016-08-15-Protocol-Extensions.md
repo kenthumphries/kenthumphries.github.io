@@ -133,6 +133,8 @@ The protocol definition includes:
 - two required methods that should be called by the UICollectionViewDelegateFlowLayout
 - a required method that is exposed for customisation (to change the algorithm for choosing which indexPath has focus)
 
+Here's the code:
+
     extension UICollectionViewDelegateFlowLayoutFocusing {
         
         func collectionViewDidEndScrolling(scrollView: UIScrollView) {
@@ -269,7 +271,7 @@ This solution is not *that Ugly*.
 And we have two options going forward:
 
 1. Subclass FocusingDelegate
-⋅⋅* This is a neat solution, but could cause issues if a delegate needs to inherit from another class
+  * This is a neat solution, but could cause issues if a delegate needs to inherit from another class
 2. Copy the code of FocusingDelegate into any focusing delegate
 
 You can download The Ugly project (Swift 2.2) by checking out [this commit](https://github.com/kenthumphries/KHCollectionViewTest/commit/5a6a501d1898c8e5f7930fcc25945b4da61b2a6d).
