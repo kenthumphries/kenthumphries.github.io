@@ -5,6 +5,10 @@ title: Protocol Extensions: The Bad, The Good, The Ugly
 
 An experiment with protocol extensions that goes frustratingly wrong.
 
+##Spoilers
+- The Ugly solution is the best. 
+- Protocol extensions won't work for optional methods.
+
 ## The Bad
 
 The bad in this post is life before protocol extensions. I'm a big fan of this WWDC 2015 video [Protocol Oriented Programming](https://developer.apple.com/videos/play/wwdc2015/408). I remember being blown away the first time I saw it. I watched it again, and then again when I started doing more Swift development.
@@ -88,7 +92,7 @@ Then any time there is a rotation, we need to return the correct targetContentOf
         return contentOffset
     }
 
-This works as expected - you can download The Bad Swift 2.2 project by checking out [this commit](https://github.com/kenthumphries/KHCollectionViewTest/commit/5b2b2ee8c83df753f87bab4254cefa581bd8270c).
+This works as expected - you can download The Bad project (Swift 2.2) by checking out [this commit](https://github.com/kenthumphries/KHCollectionViewTest/commit/5b2b2ee8c83df753f87bab4254cefa581bd8270c).
 
 ## The Good
 
@@ -124,55 +128,55 @@ The protocol definition includes:
 - two required methods that should be called by the UICollectionViewDelegateFlowLayout
 - a required method that is exposed for customisation (to change the algorithm for choosing which indexPath has focus)
 
-    extension UICollectionViewDelegateFlowLayoutFocusing {
-    
-      func collectionViewDidEndScrolling(scrollView: UIScrollView) {
-          
-          guard let collectionView = scrollView as? UICollectionView,
-              let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else {
-              return
-          }
-          
-          if let indexPathToFocusOn = self.indexPathToFocusOn(collectionView: collectionView, flowLayout: flowLayout) {
-              self.focusedIndexPath = indexPathToFocusOn
-          }
-      }
-      
-      func indexPathToFocusOn(collectionView collectionView: UICollectionView, flowLayout: UICollectionViewFlowLayout) -> NSIndexPath? {
-          
-          var indexPathToFocusOn = self.focusedIndexPath // If a new focus can't be found, default to last focus
-          
-          let visibleIndexPaths = collectionView.sortedIndexPathsForVisibleItems()
-          
-          if let selectedIndexPaths = collectionView.indexPathsForSelectedItems(),
-              visibleSelectedIndexPath = NSArray(array: visibleIndexPaths).firstObjectCommonWithArray(selectedIndexPaths) as? NSIndexPath {
-              // One of the selected cels is visible, so use it for the focus
-              indexPathToFocusOn = visibleSelectedIndexPath
-          } else {
-              // No selected visible cells, find the first cell that's at least half visible
-              for indexPath in visibleIndexPaths {
-                  if let center = flowLayout.centerForItemAtIndexPath(indexPath) where center > collectionView.contentOffset {
-                      indexPathToFocusOn = indexPath
-                      break;
-                  }
-              }
-          }
-          
-          return indexPathToFocusOn
-      }
-      
-      func focussedContentOffset(collectionView collectionView: UICollectionView) -> CGPoint? {
-          
-          guard let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout,
-              let frame = flowLayout.frameForItemAtIndexPath(focusedIndexPath) where frame != CGRectZero else {
-              return nil
-          }
-          
-          let originX = max(0, frame.origin.x - flowLayout.minimumInteritemSpacing)
-          let originY = max(0, frame.origin.y - flowLayout.minimumInteritemSpacing)
-          return CGPointMake(originX, originY)
-      }
-    }
+     extension UICollectionViewDelegateFlowLayoutFocusing {
+         
+         func collectionViewDidEndScrolling(scrollView: UIScrollView) {
+             
+             guard let collectionView = scrollView as? UICollectionView,
+                 let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else {
+                 return
+             }
+             
+             if let indexPathToFocusOn = self.indexPathToFocusOn(collectionView: collectionView, flowLayout: flowLayout) {
+                 self.focusedIndexPath = indexPathToFocusOn
+             }
+         }
+         
+         func indexPathToFocusOn(collectionView collectionView: UICollectionView, flowLayout: UICollectionViewFlowLayout) -> NSIndexPath? {
+             
+             var indexPathToFocusOn = self.focusedIndexPath // If a new focus can't be found, default to last focus
+             
+             let visibleIndexPaths = collectionView.sortedIndexPathsForVisibleItems()
+             
+             if let selectedIndexPaths = collectionView.indexPathsForSelectedItems(),
+                 visibleSelectedIndexPath = NSArray(array: visibleIndexPaths).firstObjectCommonWithArray(selectedIndexPaths) as? NSIndexPath {
+                 // One of the selected cels is visible, so use it for the focus
+                 indexPathToFocusOn = visibleSelectedIndexPath
+             } else {
+                 // No selected visible cells, find the first cell that's at least half visible
+                 for indexPath in visibleIndexPaths {
+                     if let center = flowLayout.centerForItemAtIndexPath(indexPath) where center > collectionView.contentOffset {
+                         indexPathToFocusOn = indexPath
+                         break;
+                     }
+                 }
+             }
+             
+             return indexPathToFocusOn
+         }
+         
+         func focussedContentOffset(collectionView collectionView: UICollectionView) -> CGPoint? {
+             
+             guard let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout,
+                 let frame = flowLayout.frameForItemAtIndexPath(focusedIndexPath) where frame != CGRectZero else {
+                 return nil
+             }
+             
+             let originX = max(0, frame.origin.x - flowLayout.minimumInteritemSpacing)
+             let originY = max(0, frame.origin.y - flowLayout.minimumInteritemSpacing)
+             return CGPointMake(originX, originY)
+         }
+     }
 
 The extension of UICollectionViewDelegateFlowLayoutFocusing protocol allows us to provide default implementations for the required methods. This is really powerful as all the complex logic for focusing on a cell is provided along with the protocol itself.
 
@@ -214,7 +218,54 @@ The reward for all this is a UICollectionViewDelegate that is incredibly simple:
 
 This is the power of protocol extensions. As we have provided default implementations for all the functionality of UICollectionViewDelegateFlowLayoutFocusing, any UICollectionViewDelegate can add this functionality by implementing the protocol - simply definining a single focusedIndexPath variable.
 
+You can download The Good project (Swift 2.2) by checking out [this commit](https://github.com/kenthumphries/KHCollectionViewTest/commit/de5dcc1534a655e425f1f91185bbe56b18392117).
+
 ## The Ugly
+
+Now although The Good looks great and super Swifty, it doesn't work.
+
+The wrinkle is that we're implementing optional methods on UICollectionViewDelegate. And in order for Swift to work with Objective-C, [all optional methods are declared with the @objc keyword](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Protocols.html#//apple_ref/doc/uid/TP40014097-CH25-ID284). This enforced compatibility with objective-C also [causes our extension to be ignored in Swift](http://stackoverflow.com/a/32611453).
+
+#### The Ugly Solution
+
+Fewer Protocol Extensions!
+Inheritance!
+
+We can still take advantage of the default implementations for UICollectionViewDelegateFlowLayoutFocusing - these are non-optional methods.
+
+We need to delete the UICollectionViewDelegate extension 😢 and instead add this code directly to a delegate. **At least we made it as concise as possible!**
+
+    class FocusingDelegate: NSObject, UICollectionViewDelegateFlowLayoutFocusing // Ensure that the CollectionView is Focusing
+    {
+        var focusedIndexPath = NSIndexPath(forItem: 0, inSection: 0)
+    }
+    
+    // MARK: Call UICollectionViewDelegateFlowLayoutFocusing methods on scrolling or external contentOffset change
+    extension FocusingDelegate {
+        
+        func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+            if !decelerate {
+                self.collectionViewDidEndScrolling(scrollView)
+            }
+        }
+        
+        func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+            self.collectionViewDidEndScrolling(scrollView)
+        }
+        
+        func collectionView(collectionView: UICollectionView, targetContentOffsetForProposedContentOffset proposedContentOffset: CGPoint) ->     CGPoint {
+            return self.focussedContentOffset(collectionView, proposedContentOffset: proposedContentOffset)
+        }
+    }
+
+This solution is not *that Ugly*.
+
+And we have two options going forward:
+1. Subclass FocusingDelegate
+-- This is a neat solution, but could cause issues if a delegate needs to inherit from another class
+2. Copy the code of FocusingDelegate into any focusing delegate
+
+You can download The Ugly project (Swift 2.2) by checking out [this commit](https://github.com/kenthumphries/KHCollectionViewTest/commit/5a6a501d1898c8e5f7930fcc25945b4da61b2a6d).
 
 -----
 
