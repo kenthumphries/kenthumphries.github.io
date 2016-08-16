@@ -5,11 +5,11 @@ title: Protocol Extensions. The Bad,The Good,The Ugly
 
 An experiment with protocol extensions that goes frustratingly wrong.
 
-##Spoilers
+## Spoilers
 - The Ugly solution is the best. 
 - Protocol extensions won't work for optional methods.
 
-####Update
+#### Update
 Xcode 8 beta 5 shows that Swift 3 helpfully gives a warning about optional methods in a protocol extension:
 
 ![@objc Warning]({{ site.url }}/assets/obcj-warning.png)
