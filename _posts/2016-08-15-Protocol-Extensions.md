@@ -9,6 +9,11 @@ An experiment with protocol extensions that goes frustratingly wrong.
 - The Ugly solution is the best. 
 - Protocol extensions won't work for optional methods.
 
+####Update
+Xcode 8 beta 5 shows that Swift 3 helpfully gives a warning about optional methods in a protocol extension:
+
+![@objc Warning]({{ site.url }}/assets/obcj-warning.png)
+
 ## The Bad
 
 The bad in this post is life before protocol extensions. I'm a big fan of the WWDC 2015 session introducing [Protocol Oriented Programming](https://developer.apple.com/videos/play/wwdc2015/408) (POP). I remember being blown away when I saw it. I watched it again when I got home, and then again when I started doing more Swift development.
