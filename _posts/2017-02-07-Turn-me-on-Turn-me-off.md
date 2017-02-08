@@ -1,5 +1,3 @@
-Turn me on. Turn me off.
-========================
 In an ideal world every feature we write is bite sized and shippable. When development is complete, we get our little featureling a ticket on the next release train and we move on. We are content that our hard work will soon be in the hands of happy users.
 
 Alas, the real world is not ideal. There are epics and rewrites and features with creepin scopes. There are releases that simply **must go out** and cannot wait for all features to be completed. At this point there are two common options:
