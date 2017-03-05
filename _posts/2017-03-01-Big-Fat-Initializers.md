@@ -38,9 +38,9 @@ Declaring all dependencies/state in one place makes it easier to identify a clas
 
 And finally, the disadvantages:
 
-1. **None**  
+1. **Can't Think Of Any**  
 Stop supporting countless states, with countless properties, with countless bugs. 
 
-PS. We have enough real world problems in 2017, please stop using hamburger menus.
-
 **Want to talk about big, fat initializers? [Tweet me](https://twitter.com/kentios).**
+  
+PS. We have enough real world problems in 2017, please stop using hamburger menus.
