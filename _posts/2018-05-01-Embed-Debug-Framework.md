@@ -17,7 +17,9 @@ Embedding the build works fine for both Debug and Release builds. However, **Sim
 
 1. The framework contains non-public APIs which are detected by Apple's automatic code scan.
 
+&nbsp; 
 ![@objc Warning]({{ site.url }}/assets/non-public-apis.png)
+&nbsp; 
 
 Alas, there is no built-in Xcode mechanism for linking a framework against Debug builds, while excluding Release builds.
 
@@ -27,9 +29,9 @@ Custom Run Script build phases allow for the embedding of a framework under spec
 
 The Framework must be added to the Framework Search Paths so it can be found at linking time. For example, if the framework is inside a folder `ThirdPartyFrameworks`, then set:
 
-```
+``
 Framework Search Paths->Debug: $(SRCROOT)/ThirdPartyFrameworks/
-```
+``
 
 I created a script that embeds a framework only if the build configuration is set to Debug. [Download it here](https://gist.github.com/kenthumphries/cf04683184217c7331f9c213c556c65a) with full usage instructions. Hopefully, *It Just Works*™.
 
