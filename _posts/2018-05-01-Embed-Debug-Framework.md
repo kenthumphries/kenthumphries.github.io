@@ -3,7 +3,7 @@ layout: post
 title: Embedding a Debug Only Framework
 ---
 
-When using Fastlane/Snapshot & [SimulatorStatusMagic](https://github.com/shinydevelopment/SimulatorStatusMagic) (which are both ace!!) to produce screenshots, how should SimulatorStatusMagic be added to a project?
+When using [fastlane/Snapshot](https://docs.fastlane.tools/getting-started/ios/screenshots/) & [SimulatorStatusMagic](https://github.com/shinydevelopment/SimulatorStatusMagic) (which are both ace!!) to produce screenshots, how should SimulatorStatusMagic be added to a project?
 
 ## Just Use a Dependency Manager
 Alright - that's the easy way out. Continue reading if your project is not using CocoaPods or Carthage.
@@ -39,7 +39,7 @@ The script solution was adapted from this [SO post](https://stackoverflow.com/a/
 
 ## Just Embed It In the UITest Target
 
-The above solution allows `SDStatusBarManager` to be called from within the main app target. When using Fastlane/Snapshot, the screenshots are captured from a UITest target. 
+The above solution allows `SDStatusBarManager` to be called from within the main app target. When using fastlane/Snapshot, the screenshots are captured from a UITest target. 
 
 **Is it possible to use SimulatorStatusMagic from the UITest target and keep the app target clean from 'Debug frameworks'?**
 
