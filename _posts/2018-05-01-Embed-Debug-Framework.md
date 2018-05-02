@@ -18,7 +18,7 @@ Embedding the build works fine for both Debug and Release builds. However, **Sim
 1. The framework contains non-public APIs which are detected by Apple's automatic code scan.
 
 &nbsp; 
-![@objc Warning]({{ site.url }}/assets/non-public-apis.png)
+![Apple's email about non-public APIs]({{ site.url }}/assets/non-public-apis.png)
 &nbsp; 
 
 Alas, there is no built-in Xcode mechanism for linking a framework against Debug builds, while excluding Release builds.
@@ -37,7 +37,7 @@ Framework Search Paths->Debug: $(SRCROOT)/ThirdPartyFrameworks/
 
 I created a script that embeds a framework only if the build configuration is set to Debug. [Download it here](https://gist.github.com/kenthumphries/cf04683184217c7331f9c213c556c65a) with full usage instructions. Hopefully, *It Just Works*™.
 
-![@objc Warning]({{ site.url }}/assets/custom-run-script-build-phase.png)
+![Configured run script build phase]({{ site.url }}/assets/custom-run-script-build-phase.png)
 
 The script solution was adapted from this [SO post](https://stackoverflow.com/a/40484337/9051514) which shows how to embed framework for certain architectures.
 
@@ -63,7 +63,7 @@ The app itself does not require the framework to compile. It does require the fr
 
 In the UITest target, add a custom Run Script build phase to embed the framework into the app (do insert the red underlined name):
 
-![@objc Warning]({{ site.url }}/assets/embed-in-main-app.png)
+![Configured run script build phase for main app]({{ site.url }}/assets/embed-in-main-app.png)
 
 #### The Generated Test Runner
 
@@ -71,7 +71,7 @@ The test runner also requires the framework to run.
 
 In the UITest target, add a custom Run Script built phase to embed the framework in the test runner (do insert the red underlined name):
 
-![@objc Warning]({{ site.url }}/assets/embed-in-test-runner.png)
+![Configured run script build phase for test runner]({{ site.url }}/assets/embed-in-test-runner.png)
 
 -----
 
