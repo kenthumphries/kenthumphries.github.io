@@ -5,4 +5,4 @@ title: WhenDo Support
 
 Please send any questions to the email address:
 
-![@objc Warning]({{ site.url }}/assets/whendo-support-email.png)
+![Support email address]({{ site.url }}/assets/whendo-support-email.png)
