@@ -25,6 +25,8 @@ Alas, there is no built-in Xcode mechanism for linking a framework against Debug
 
 ## Just Embed It For Debug
 
+**Update: I added to the [official installation instructions on GitHub](https://github.com/shinydevelopment/SimulatorStatusMagic/blob/master/INSTALLATION.md) to describe this process.**
+
 Custom Run Script build phases allow for the embedding of a framework under specified conditions, such as Debug configuration only.
 
 The Framework must be added to the Framework Search Paths so it can be found at linking time. For example, if the framework is inside a folder `ThirdPartyFrameworks`, then set:
