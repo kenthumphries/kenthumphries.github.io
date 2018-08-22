@@ -3,7 +3,7 @@ layout: post
 title: Der Berliner Jäger - Part 2
 date: 2018-08-19 00:00:00 -0000
 ---
-*First read: [Part 1 - Working in Berlin](http://kenthumphries.github.io/Der-Berliner-Jager/Part-1/)*
+*First read: [Part 1 - Working in Berlin]({{ site.url }}/Der-Berliner-Jager/Part-1/)*
 
 ### No Bullshit.
 
@@ -39,7 +39,7 @@ The final interview with the head of engineering was a crisp 30 minutes in lengt
 
 The internal recruiter got back to me very quickly, on a Friday afternoon, and my hard work paid off - I now had 2 offers to choose from.
 
-*Continue reading: [Part 3 - Decisions](http://kenthumphries.github.io/Der-Berliner-Jager/Part-3/)*
+*Continue reading: [Part 3 - Decisions]({{ site.url }}/Der-Berliner-Jager/Part-3/)*
 
 -----
 
