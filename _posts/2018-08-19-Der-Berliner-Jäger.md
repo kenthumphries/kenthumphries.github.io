@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Der Berliner Jäger \ The Berlin Hunter
