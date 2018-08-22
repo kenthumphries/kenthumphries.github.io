@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Der Berliner Jäger - Part 1
+date: 2018-08-19 00:00:00 -0000
 ---
 *First read the summary: [Der Berliner Jäger](http://kenthumphries.github.io/Der-Berliner-Jager/)*
 
