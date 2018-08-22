@@ -1,5 +1,8 @@
 
-## Der Berliner Jäger \ The Berlin Hunter
+---
+layout: post
+title: Der Berliner Jäger \ The Berlin Hunter
+---
 
 This is a series of posts about my recent job hunting experience in Berlin. I've definitely lead more interviews than I've taken, so these tips come from both sides of the interview panel.
 
@@ -27,3 +30,7 @@ Here's a summary of my iOS job hunting advice:
 	- If you genuinely have none, explain why, rather than flounder for one
 
 *Continue reading: [Part 1 - Working in Berlin](http://kenthumphries.github.io/Der-Berliner-Jager-Part-1/)*
+
+-----
+
+**Comments? [Tweet me](https://twitter.com/kentios).**
