@@ -40,4 +40,4 @@ I stared at the list, and kept finding myself returning to the bank. I felt hesi
 
 I wrote a very honest email to the health startup, hoping they would understand my decision. It was not easy. I felt guilty saying no after such a positive interview process. It was a lot like the "it's not you, it's me" conversation that frequently occurs when dating.
 
-I also wrote to the internal recruiter at N26 and happily accepted their offer. Since accepting I've been proud to tell people about my new employer, and every time I see an N26 advert on the U-bahn.
+I also wrote to the internal recruiter at N26 and happily accepted their offer. Since accepting I've been proud to tell people about my new employer. I can't wait to start the next chapter in my career!
