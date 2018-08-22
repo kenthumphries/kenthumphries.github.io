@@ -5,9 +5,9 @@ title: Der Berliner Jäger \ The Berlin Hunter
 
 This is a 3 part series about my recent job hunting experience in Berlin. I've definitely lead more interviews than I've taken, so these tips come from both sides of the interview panel.
 
-- [Part 1 - Working in Berlin](http://kenthumphries.github.io/Der-Berliner-Jager/Part-1/)
-- [Part 2 - No Bullshit.](http://kenthumphries.github.io/Der-Berliner-Jager/Part-2/)
-- [Part 3 - Decisions](http://kenthumphries.github.io/Der-Berliner-Jager/Part-3/)
+- [Part 1 - Working in Berlin](/Part-1)
+- [Part 2 - No Bullshit.](/Part-2)
+- [Part 3 - Decisions](/Part-3)
 
 ### My Hunting Tips
 Here's a summary of my iOS job hunting advice:
@@ -15,7 +15,7 @@ Here's a summary of my iOS job hunting advice:
 - In your cover letter, write **enthusastically** about why you want to work at the company
 - Over prepare for interviews
 	- Study up on iOS basics - [iOS Interview Questions](https://medium.com/@duruldalkanat/ios-interview-questions-13840247a57a)
-	- Complete simple coding exercises - [HackerRank](hackerrank.com)
+	- Complete simple coding exercises - [HackerRank](https://www.hackerrank.com)
 	- Practice long answer* questions **out loud**
 		1. Tell us about your previous work experience
 		2. Why should we hire you?
@@ -28,7 +28,7 @@ Here's a summary of my iOS job hunting advice:
 - Plan questions that you want to ask the interviewers
 	- If you genuinely have none, explain why, rather than flounder for one
 
-*Continue reading: [Part 1 - Working in Berlin](http://kenthumphries.github.io/Der-Berliner-Jager/Part-1/)*
+*Continue reading: [Part 1 - Working in Berlin](/Part-1)*
 
 -----
 
