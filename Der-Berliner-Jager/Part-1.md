@@ -3,7 +3,7 @@ layout: post
 title: Der Berliner Jäger - Part 1
 date: 2018-08-19 00:00:00 -0000
 ---
-*First read the summary: [Der Berliner Jäger](http://kenthumphries.github.io/Der-Berliner-Jager/)*
+*First read the summary: [Der Berliner Jäger]({{ site.url }}/Der-Berliner-Jager/)*
 
 ### Working In Berlin
 
@@ -43,7 +43,7 @@ I sent some code from WhenDo to the CTO so they could check my style, and then h
 
 11 days after the initial email from our shared friend, I had an offer. The salary was very competitive, but I respectfully asked for some time to think as I was also interviewing with another company.
 
-*Continue reading: [Part 2 - No Bullshit.](http://kenthumphries.github.io/Der-Berliner-Jager/Part-2/)*
+*Continue reading: [Part 2 - No Bullshit.]({{ site.url }}o/Der-Berliner-Jager/Part-2/)*
 
 -----
 
