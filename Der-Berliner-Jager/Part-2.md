@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Der Berliner Jäger - Part 2
+date: 2018-08-19 00:00:00 -0000
 ---
 *First read: [Part 1 - Working in Berlin](http://kenthumphries.github.io/Der-Berliner-Jager/Part-1/)*
 
