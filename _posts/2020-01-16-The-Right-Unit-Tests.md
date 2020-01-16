@@ -4,11 +4,11 @@ title: iOS - The *Right* Unit Tests
 ---
 
 This isn't a post to teach the basics of unit testing on iOS. It's designed for people who already write unit tests, but aren't sure if they're doing it _right_.
-<br></br>
+<br>
 ![Unit testing can get messy!]({{ site.url }}/assets/2020-01-16-The-Right-Unit-Test/alice-dietrich-messy-unsplash.jpg)
 
 <p align="center"><b>Unit testing can get messy</b>  &nbsp;&nbsp;&nbsp;&nbsp; <i>(photo by <a href="https://unsplash.com/@alicegrace?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Alice Dietrich</a>)</i></p>
-<br></br>
+<br>
 Just like code, tests should be clear, concise and simple for everyone to understand. It should require no effort to understand a test, even for someone who is not the author, and does not have the full context.
 
 This post is all about getting back to fundamentals and understanding what's most valuable for unit tests.
