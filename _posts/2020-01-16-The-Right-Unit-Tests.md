@@ -131,7 +131,7 @@ What does *safety critical* code mean? Focus on testing the parts of your class 
 
 # 7. Fail Clearly
 
-When causing a newly written test to fail, it's important to think how that failure will look to a new pair of eyes. Consider a decodable struct with five variables that are all optional strings. It's tempting, and quite simple to write one test:
+When causing a newly written test to fail, it's important to think how that failure will look to a new pair of eyes. Consider a decodable struct with three variables that are all optional strings. It's tempting, and quite simple to write one test:
 
 ```
 func test_decodes_fullValidJSON_allFieldsDecoded() {
@@ -139,16 +139,12 @@ func test_decodes_fullValidJSON_allFieldsDecoded() {
                 {
                   "string1": "This is string1",
                   "string2": "This is string2",
-                  "string3": "This is string3",
-                  "string4": "This is string4",
-                  "string5": "This is string5",
+                  "string3": "This is string3"
                 }
                """
     let expected = MyStruct(string1: "This is string1",
                             string2: "This is string2",
-                            string3: "This is string3",
-                            string4: "This is string4",
-                            string5: "This is string5")
+                            string3: "This is string3")
 
     guard let jsonData = json.data(using: .utf8) else {
         XCTFail("Invalid JSON test data")
@@ -166,13 +162,13 @@ func test_decodes_fullValidJSON_allFieldsDecoded() {
 The test name is clear and the test is well isolated. However, what happens when the test fails?
 
 ```
-XCTAssertEqual failed: ("MyStruct(string1: Optional("This is string1."), string2: Optional("This is string2."), string3: Optional("This
-is string3."), string4: Optional("This is string4."), string5: Optional("This is string5."))") is not equal to ("MyStruct(string1: Optional("This is string1."), string2: Optional("This is string2."),
-string3: Optional("This is string3."), string4: Optional("This is string4,"), string5: Optional("This is string5."))")
+XCTAssertEqual failed: ("MyStruct(string1: Optional("This is string1."), string2: Optional("This is
+string2."), string3: Optional("This is string3."))") is not equal to ("MyStruct(string1: Optional("
+This is string1,"), string2: Optional("This is string2."), string3: Optional("This is string3."))")
 ```
 This is a trivial example but I've seen tests where the failure takes up half the screen, and requires opening a diff tool to figure out which property failed the equality test.
 
-The solution is to break this test up into 5 smaller tests, one per field. This would look like:
+The solution is to break this test up into 3 smaller tests, one per field. This would look like:
 
 ```
 func test_decodes_string1() {
@@ -197,7 +193,7 @@ func test_decodes_string1() {
 
 ...
 
-func test_decodes_string5() {
+func test_decodes_string3() {
   ...
 }
 
@@ -242,4 +238,4 @@ When a developer treats their tests as a second class citizen, their tests will 
 ----
 **Comments? Contact me on [Twitter](https://twitter.com/kentios)**
 
-*A special thanks to my former colleague, friend and testing guru Rich Moult for teaching me a lot about unit testing.*
+*A special thanks to my former colleague, friend and testing guru Rich Moult for teaching me so much about unit testing.*
