@@ -6,13 +6,11 @@ title: iOS - The *Right* Unit Tests
 This isn't a post to teach the basics of unit testing on iOS. It's designed for people who already write unit tests, but aren't sure if they're doing it _right_.
 
 &nbsp;
-&nbsp;
 
 ![Unit testing can get messy!]({{ site.url }}/assets/2020-01-16-The-Right-Unit-Test/alice-dietrich-messy-unsplash.jpg)
 
-<p align="center"><b>Unit testing can get messy</b>  &nbsp;&nbsp;&nbsp;&nbsp; <i>(photo by <a href="https://unsplash.com/@alicegrace?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Alice Dietrich</a>)</i></p>
+<p align="center"><b>Unit testing can get messy</b><br><i>(photo by <a href="https://unsplash.com/@alicegrace?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Alice Dietrich</a>)</i></p>
 
-&nbsp;
 &nbsp;
 
 Just like code, tests should be clear, concise and simple for everyone to understand. It should require no effort to understand a test, even for someone who is not the author, and does not have the full context.
@@ -23,9 +21,13 @@ This post is all about getting back to fundamentals and understanding what's mos
 
 # Tools
 
+&nbsp;
+
 ![All The Tools!]({{ site.url }}/assets/2020-01-16-The-Right-Unit-Test/cesar-carlevarino-aragon-tools-unsplash.jpg)
 
 <p align="center"><b>All The Tools!</b>  &nbsp;&nbsp;&nbsp;&nbsp; <i>(photo by <a href="https://unsplash.com/@carlevarino?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Cesar Carlevarino Aragon</a>)</i></p>
+
+&nbsp;
 
 There are some great tools for unit testing iOS in Swift (for example [Quick](https://github.com/Quick/Quick)/[Nimble](https://github.com/Quick/Nimble), [SwiftyMocky](https://github.com/MakeAWishFoundation/SwiftyMocky), [Snapshot-testing](https://github.com/pointfreeco/swift-snapshot-testing)). I encourage you to use them! However, even with great tools, developers can still write bad tests. As an example, Quick (or any [BDD](https://en.wikipedia.org/wiki/Behavior-driven_development) franework) improves test naming & readability, but it's important to first understand _why_ better naming is important. To explain these fundamental ideas, let's just talk about plain vanilla XCTests.
 
@@ -42,7 +44,9 @@ Here's a short summary for context:
  - **Thorough:** About confidence, not percentages
 
 FIRST is a terrific set of values for tests. However, it's a general testing principle, not a specific set of tips.
-<br></br>
+
+&nbsp;
+
 Here are practical tips to improve the quality of your tests, taking FIRST into account. The most important tips are presented first.
 
 # 1. K.I.S.S. And Short, Stupid
@@ -92,9 +96,13 @@ This sounds so obvious, but so many times I've broken code only to find an exist
 
 # 4. Test Naming
 
+&nbsp;
+
 ![Names are important]({{ site.url }}/assets/2020-01-16-The-Right-Unit-Test/chuttersnap-names-unsplash.jpg)
 
 <p align="center"><b>Names are important</b>  &nbsp;&nbsp;&nbsp;&nbsp; <i>(photo by <a href="https://unsplash.com/@chuttersnap?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">chuttersnap</a>)</i></p>
+
+&nbsp;
 
 Ideally, when a test fails, the name of the test should be all a developer needs to pinpoint the problem in code. As elaborated below (_Test Coverage_), we want our tests to act like lots of small, independent, precise status lights.
 
@@ -116,9 +124,13 @@ If `test_myMethod_withFriday_returnsSmile()` fails, the test name alone tells us
 
 Think about the term `test coverage` literally. Not with percentages, but imagine that your tests are little green ants swarming all over your class. 
 
+&nbsp;
+
 ![That's one test...]({{ site.url }}/assets/2020-01-16-The-Right-Unit-Test/vlad-tchompalov-green-ant-unsplash.jpg)
 
 <p align="center"><b>That's one test...</b> &nbsp;&nbsp;&nbsp;&nbsp; <i>(photo by <a href="https://unsplash.com/@tchompalov?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Vlad Tchompalov</a>)</i></p>
+
+&nbsp;
 
 As soon as one of the ants finds something wrong with the class, it will turn red. We want to write lots of small, independent tests that act like status lights, quickly identifying precisely which part of our functionality is broken.
 
@@ -222,9 +234,13 @@ Writing tests is not about quantity, it's about quality. Essentially we are writ
 
 *"Here are some examples of how my class should work. If you refactor, or add features to the class, these examples should still pass. If the class functionality changes, some of these examples should break."*
 
+&nbsp;
+
 ![Quality tests save you time]({{ site.url }}/assets/2020-01-16-The-Right-Unit-Test/pierre-bamin-quality-pocket-watch-unsplash.jpg)
 
 <p align="center"><b>Quality tests save you time</b> &nbsp;&nbsp;&nbsp;&nbsp; <i>(photo by <a href="https://unsplash.com/@bamin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pierre Bamin</a>)</i></p>
+
+&nbsp;
 
 When a developer treats their tests as a second class citizen, their tests will be second class. It's that simple. You should be as proud of your tests as your production code. Put the time in to make your unit tests great. Just as great code is easy to extend, great tests are easy to augment.
 
