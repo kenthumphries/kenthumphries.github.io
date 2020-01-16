@@ -210,13 +210,13 @@ equal to ("Optional("This is string1,")") -
 
 ## Summary
 
-![Quality tests save you time]({{ site.url }}/assets/2020-01-16-The-Right-Unit-Test/pierre-bamin-quality-pocket-watch-unsplash.jpg)
-
-**Quality tests save you time** | *Photo by [Pierre Bamin](https://unsplash.com/@bamin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)*
-
 Writing tests is not about quantity, it's about quality. Essentially we are writing documentation, or specifications, for our future selves;  
 
 *"Here are some examples of how my class should work. If you refactor, or add features to the class, these examples should still pass. If the class functionality changes, some of these examples should break."*
+
+![Quality tests save you time]({{ site.url }}/assets/2020-01-16-The-Right-Unit-Test/pierre-bamin-quality-pocket-watch-unsplash.jpg)
+
+<p align="center">Quality tests save you time | <i>Photo by <a href="https://unsplash.com/@bamin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pierre Bamin</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></i></p>
 
 When a developer treats their tests as a second class citizen, their tests will be second class. It's that simple. You should be as proud of your tests as your production code. Put the time in to make your unit tests great. Just as great code is easy to extend, great tests are easy to augment.
 
