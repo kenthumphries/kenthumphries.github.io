@@ -4,18 +4,18 @@ title: iOS - The *Right* Unit Tests
 ---
 
 This isn't a post to teach the basics of unit testing on iOS. It's designed for people who already write unit tests, but aren't sure if they're doing it _right_.
-
+<br></br>
 ![Unit testing can get messy!]({{ site.url }}/assets/2020-01-16-The-Right-Unit-Test/alice-dietrich-messy-unsplash.jpg)
 
 <p align="center"><b>Unit testing can get messy</b>  &nbsp;&nbsp;&nbsp;&nbsp; <i>(photo by <a href="https://unsplash.com/@alicegrace?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Alice Dietrich</a>)</i></p>
-
+<br></br>
 Just like code, tests should be clear, concise and simple for everyone to understand. It should require no effort to understand a test, even for someone who is not the author, and does not have the full context.
 
 This post is all about getting back to fundamentals and understanding what's most valuable for unit tests.
 
 *[Jump to the Summary](#summary)*
 
-## Tools
+# Tools
 
 ![All The Tools!]({{ site.url }}/assets/2020-01-16-The-Right-Unit-Test/cesar-carlevarino-aragon-tools-unsplash.jpg)
 
@@ -23,7 +23,7 @@ This post is all about getting back to fundamentals and understanding what's mos
 
 There are some great tools for unit testing iOS in Swift (for example [Quick](https://github.com/Quick/Quick)/[Nimble](https://github.com/Quick/Nimble), [SwiftyMocky](https://github.com/MakeAWishFoundation/SwiftyMocky), [Snapshot-testing](https://github.com/pointfreeco/swift-snapshot-testing)). I encourage you to use them! However, even with great tools, developers can still write bad tests. As an example, Quick (or any [BDD](https://en.wikipedia.org/wiki/Behavior-driven_development) franework) improves test naming & readability, but it's important to first understand _why_ better naming is important. To explain these fundamental ideas, let's just talk about plain vanilla XCTests.
 
-## FIRST Things First
+# FIRST Things First
 
 If you're not familiar with it, please take a minute to read about the [FIRST principle](https://hackernoon.com/test-f-i-r-s-t-65e42f3adc17).
 
@@ -36,12 +36,10 @@ Here's a short summary for context:
  - **Thorough:** About confidence, not percentages
 
 FIRST is a terrific set of values for tests. However, it's a general testing principle, not a specific set of tips.
-
-----
-
+<br></br>
 Here are practical tips to improve the quality of your tests, taking FIRST into account. The most important tips are presented first.
 
-## 1. K.I.S.S. And Short, Stupid
+# 1. K.I.S.S. And Short, Stupid
 
 Keep your tests short.
 
@@ -55,7 +53,7 @@ When tests are complex or long, it is almost certain that code can be further im
 
 **choose any number that increases your test quality over time*
 
-## 2. Test Quality != Code Quality
+# 2. Test Quality != Code Quality
 
 It's important to remember that good tests have different characteristics to code. A former colleague spent countless PR reviews teaching me that **shared** test utilities (mocks, convenience factories, comparators) are dangerous. As developers, we learn the [DRY](https://wikipedia.org/wiki/Don't_Repeat_Yourself) principle at birth. But, as FIRST shows, isolation is actually a more important quality for tests.
 
@@ -69,7 +67,7 @@ Note, there is a difference between a shared utility and a function shared by si
 
 **It's OK to repeat test utilities & data. Above all, we want to avoid breaking Test A when someone modifies a shared utility so that it works with Test B.**
 
-## 3. Test Your Tests
+# 3. Test Your Tests
 
 A common pitfall is to write tests that return false positives. It is necessary to satisfy two things:
 
@@ -82,7 +80,7 @@ This sounds so obvious, but so many times I've broken code only to find an exist
 
 **You should always run a test twice, once to see it pass, and once to see it fail**.
 
-## 4. Test Naming
+# 4. Test Naming
 
 ![Names are important]({{ site.url }}/assets/2020-01-16-The-Right-Unit-Test/chuttersnap-names-unsplash.jpg)
 
@@ -104,7 +102,7 @@ If `test_myMethod_withFriday_returnsSmile()` fails, the test name alone tells us
 
 **Given a test name, we should be able to determine which method is being tested, in which state, and what is the expected output/behaviour.**
 
-## 5. Test Coverage
+# 5. Test Coverage
 
 Think about the term `test coverage` literally. Not with percentages, but imagine that your tests are little green ants swarming all over your class. 
 
@@ -118,7 +116,7 @@ If all the ants were to turn red at the same time, they would not help pinpoint 
 
 **In an ideal world, a single bug will cause one (and only one) test to fail, giving us precise information about where and how the bug occurs.**
 
-## 6. Code Safety
+# 6. Code Safety
 
 If we continue the ant analogy, the sweetest parts of each class should have the most ants. That is, you should focus your testing on methods that are more *safety critical*.
 
@@ -131,7 +129,7 @@ What does *safety critical* code mean? Focus on testing the parts of your class 
 
 **Prioritise writing tests for safety critical code.**
 
-## 7. Fail Clearly
+# 7. Fail Clearly
 
 When causing a newly written test to fail, it's important to think how that failure will look to a new pair of eyes. Consider a decodable struct with five variables that are all optional strings. It's tempting, and quite simple to write one test:
 
@@ -212,7 +210,7 @@ equal to ("Optional("This is string1,")") -
 
 **Ensure that test _failures_ are trivial to understand. It's better to write lots of simple tests than one complex test.**
 
-## Summary
+# Summary
 
 Writing tests is not about quantity, it's about quality. Essentially we are writing documentation, or specifications, for our future selves;  
 
@@ -240,3 +238,8 @@ When a developer treats their tests as a second class citizen, their tests will 
 
 1. **After 6 months, is it trivial to understand how your test works?**  
 **If the answer is no, you've written a low quality test. Try again! 😄**
+
+----
+**Comments? Contact me on [Twitter](https://twitter.com/kentios)**
+
+*A special thanks to my former colleague, friend and testing guru Rich Moult for teaching me a lot about unit testing.*
