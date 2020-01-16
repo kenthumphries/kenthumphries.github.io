@@ -257,6 +257,8 @@ When a developer treats their tests as a second class citizen, their tests will 
 1. **After 6 months, is it trivial to understand how your test works?**  
 **If the answer is no, you've written a low quality test. Try again! 😄**
 
+&nbsp;
+
 ----
 **Comments? Contact me on [Twitter](https://twitter.com/kentios)**
 
