@@ -6,7 +6,7 @@ Just like code, tests should be clear, concise and simple for everyone to unders
 
 This post is all about getting back to fundamentals and understanding what's most valuable for unit tests.
 
-*[Jump to the Summary]((#summary))*
+*[Jump to the Summary](#summary)*
 
 ## Tools
 
