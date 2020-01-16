@@ -1,6 +1,6 @@
 ---
 layout: post
-title: iOS: The *Right* Unit Tests
+title: iOS - The *Right* Unit Tests
 ---
 
 This isn't a post to teach the basics of unit testing on iOS. It's designed for people who already write unit tests, but aren't sure if they're doing it _right_.
