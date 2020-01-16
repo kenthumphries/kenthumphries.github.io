@@ -84,9 +84,9 @@ This sounds so obvious, but so many times I've broken code only to find an exist
 
 ## 4. Test Naming
 
-![Naming is important]({{ site.url }}/assets/2020-01-16-The-Right-Unit-Test/chuttersnap-names-unsplash.jpg)
+![Names are important]({{ site.url }}/assets/2020-01-16-The-Right-Unit-Test/chuttersnap-names-unsplash.jpg)
 
-<p align="center"><b>Naming is important</b>  &nbsp;&nbsp;&nbsp;&nbsp; <i>(photo by <a href="https://unsplash.com/@chuttersnap?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">chuttersnap</a>)</i></p>
+<p align="center"><b>Names are important</b>  &nbsp;&nbsp;&nbsp;&nbsp; <i>(photo by <a href="https://unsplash.com/@chuttersnap?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">chuttersnap</a>)</i></p>
 
 Ideally, when a test fails, the name of the test should be all a developer needs to pinpoint the problem in code. As elaborated below (_Test Coverage_), we want our tests to act like lots of small, independent, precise status lights.
 
