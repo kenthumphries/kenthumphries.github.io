@@ -13,7 +13,7 @@ This post is all about getting back to fundamentals and understanding what's mos
 
 ## Tools
 
-![All The Tools!]({{ site.url }}/assets/2020-16-01-Right-Unit-Testing/cesar-carlevarino-aragon-tools-unsplash.jpg)
+![All The Tools!]({{ site.url }}/assets/2020-01-16-The-Right-Unit-Test/cesar-carlevarino-aragon-tools-unsplash.jpg)
 
 **All The Tools!** | *Photo by [Cesar Carlevarino Aragon](https://unsplash.com/@carlevarino?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)*
 
@@ -55,7 +55,7 @@ When tests are complex or long, it is almost certain that code can be further im
 
 It's important to remember that good tests have different characteristics to code. A former colleague spent countless PR reviews teaching me that **shared** test utilities (mocks, convenience factories, comparators) are dangerous. As developers, we learn the [DRY](https://wikipedia.org/wiki/Don't_Repeat_Yourself) principle at birth. But, as FIRST shows, isolation is actually a more important quality for tests.
 
-![We don't always need things to be DRY]({{ site.url }}/assets/2020-16-01-Right-Unit-Testing/erik-witsoe-dry-washing-unsplash.jpg)
+![We don't always need things to be DRY]({{ site.url }}/assets/2020-01-16-The-Right-Unit-Test/erik-witsoe-dry-washing-unsplash.jpg)
 
 **We don't always need things to be DRY** | *Photo by [Erik Witsoe](https://unsplash.com/@ewitsoe?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)*
 
@@ -80,7 +80,7 @@ This sounds so obvious, but so many times I've broken code only to find an exist
 
 ## 4. Test Naming
 
-![Naming is important]({{ site.url }}/assets/2020-16-01-Right-Unit-Testing/chuttersnap-names-unsplash.jpg)
+![Naming is important]({{ site.url }}/assets/2020-01-16-The-Right-Unit-Test/chuttersnap-names-unsplash.jpg)
 
 **Naming is important** | *Photo by [chuttersnap](https://unsplash.com/@chuttersnap?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)*
 
@@ -104,7 +104,7 @@ If `test_myMethod_withFriday_returnsSmile()` fails, the test name alone tells us
 
 Think about the term `test coverage` literally. Not with percentages, but imagine that your tests are little green ants swarming all over your class. 
 
-![That's one test...]({{ site.url }}/assets/2020-16-01-Right-Unit-Testing/vlad-tchompalov-green-ant-unsplash.jpg)
+![That's one test...]({{ site.url }}/assets/2020-01-16-The-Right-Unit-Test/vlad-tchompalov-green-ant-unsplash.jpg)
 
 **That's one test...** | *Photo by [Vlad Tchompalov](https://unsplash.com/@tchompalov?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)*
 
@@ -210,7 +210,7 @@ equal to ("Optional("This is string1,")") -
 
 ## Summary
 
-![Quality tests save you time]({{ site.url }}/assets/2020-16-01-Right-Unit-Testing/pierre-bamin-quality-pocket-watch-unsplash.jpg)
+![Quality tests save you time]({{ site.url }}/assets/2020-01-16-The-Right-Unit-Test/pierre-bamin-quality-pocket-watch-unsplash.jpg)
 
 **Quality tests save you time** | *Photo by [Pierre Bamin](https://unsplash.com/@bamin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)*
 
