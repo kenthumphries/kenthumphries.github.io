@@ -4,11 +4,17 @@ title: iOS - The *Right* Unit Tests
 ---
 
 This isn't a post to teach the basics of unit testing on iOS. It's designed for people who already write unit tests, but aren't sure if they're doing it _right_.
-<br>
+
+&nbsp;
+&nbsp;
+
 ![Unit testing can get messy!]({{ site.url }}/assets/2020-01-16-The-Right-Unit-Test/alice-dietrich-messy-unsplash.jpg)
 
 <p align="center"><b>Unit testing can get messy</b>  &nbsp;&nbsp;&nbsp;&nbsp; <i>(photo by <a href="https://unsplash.com/@alicegrace?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Alice Dietrich</a>)</i></p>
-<br>
+
+&nbsp;
+&nbsp;
+
 Just like code, tests should be clear, concise and simple for everyone to understand. It should require no effort to understand a test, even for someone who is not the author, and does not have the full context.
 
 This post is all about getting back to fundamentals and understanding what's most valuable for unit tests.
@@ -57,9 +63,13 @@ When tests are complex or long, it is almost certain that code can be further im
 
 It's important to remember that good tests have different characteristics to code. A former colleague spent countless PR reviews teaching me that **shared** test utilities (mocks, convenience factories, comparators) are dangerous. As developers, we learn the [DRY](https://wikipedia.org/wiki/Don't_Repeat_Yourself) principle at birth. But, as FIRST shows, isolation is actually a more important quality for tests.
 
+&nbsp;
+
 ![We don't always need things to be DRY]({{ site.url }}/assets/2020-01-16-The-Right-Unit-Test/erik-witsoe-dry-washing-unsplash.jpg)
 
 <p align="center"><b>We don't always need things to be DRY</b>  &nbsp;&nbsp;&nbsp;&nbsp; <i>(photo by <a href="https://unsplash.com/@ewitsoe?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Erik Witsoe</a>)</i></p>
+
+&nbsp;
 
 Shared test utilities and test data inevitably become as complex as the code itself when you handle every possible input combination. Recreating a utility for a single purpose in each test means the code is simpler and completely independent from any other test.
 
@@ -238,4 +248,4 @@ When a developer treats their tests as a second class citizen, their tests will 
 ----
 **Comments? Contact me on [Twitter](https://twitter.com/kentios)**
 
-*A special thanks to my former colleague, friend and testing guru Rich Moult for teaching me so much about unit testing.*
+*A special thanks to my former colleague, friend and testing guru Rich Moult for teaching me so much about unit testing.* 🙏
