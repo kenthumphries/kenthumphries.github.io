@@ -5,6 +5,10 @@ title: iOS - The *Right* Unit Tests
 
 This isn't a post to teach the basics of unit testing on iOS. It's designed for people who already write unit tests, but aren't sure if they're doing it _right_.
 
+![Unit testing can get messy!]({{ site.url }}/assets/2020-01-16-The-Right-Unit-Test/alice-dietrich-messy-unsplash.jpg)
+
+<p align="center"><b>Unit testing can get messy</b>  &nbsp;&nbsp;&nbsp;&nbsp; <i>(photo by <a href="https://unsplash.com/@alicegrace?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Alice Dietrich</a>)</i></p>
+
 Just like code, tests should be clear, concise and simple for everyone to understand. It should require no effort to understand a test, even for someone who is not the author, and does not have the full context.
 
 This post is all about getting back to fundamentals and understanding what's most valuable for unit tests.
@@ -15,7 +19,7 @@ This post is all about getting back to fundamentals and understanding what's mos
 
 ![All The Tools!]({{ site.url }}/assets/2020-01-16-The-Right-Unit-Test/cesar-carlevarino-aragon-tools-unsplash.jpg)
 
-**All The Tools!** | *Photo by [Cesar Carlevarino Aragon](https://unsplash.com/@carlevarino?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)*
+<p align="center"><b>All The Tools!</b>  &nbsp;&nbsp;&nbsp;&nbsp; <i>(photo by <a href="https://unsplash.com/@carlevarino?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Cesar Carlevarino Aragon</a>)</i></p>
 
 There are some great tools for unit testing iOS in Swift (for example [Quick](https://github.com/Quick/Quick)/[Nimble](https://github.com/Quick/Nimble), [SwiftyMocky](https://github.com/MakeAWishFoundation/SwiftyMocky), [Snapshot-testing](https://github.com/pointfreeco/swift-snapshot-testing)). I encourage you to use them! However, even with great tools, developers can still write bad tests. As an example, Quick (or any [BDD](https://en.wikipedia.org/wiki/Behavior-driven_development) franework) improves test naming & readability, but it's important to first understand _why_ better naming is important. To explain these fundamental ideas, let's just talk about plain vanilla XCTests.
 
@@ -57,7 +61,7 @@ It's important to remember that good tests have different characteristics to cod
 
 ![We don't always need things to be DRY]({{ site.url }}/assets/2020-01-16-The-Right-Unit-Test/erik-witsoe-dry-washing-unsplash.jpg)
 
-**We don't always need things to be DRY** | *Photo by [Erik Witsoe](https://unsplash.com/@ewitsoe?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)*
+<p align="center"><b>We don't always need things to be DRY</b>  &nbsp;&nbsp;&nbsp;&nbsp; <i>(photo by <a href="https://unsplash.com/@ewitsoe?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Erik Witsoe</a>)</i></p>
 
 Shared test utilities and test data inevitably become as complex as the code itself when you handle every possible input combination. Recreating a utility for a single purpose in each test means the code is simpler and completely independent from any other test.
 
@@ -82,7 +86,7 @@ This sounds so obvious, but so many times I've broken code only to find an exist
 
 ![Naming is important]({{ site.url }}/assets/2020-01-16-The-Right-Unit-Test/chuttersnap-names-unsplash.jpg)
 
-**Naming is important** | *Photo by [chuttersnap](https://unsplash.com/@chuttersnap?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)*
+<p align="center"><b>Naming is important</b>  &nbsp;&nbsp;&nbsp;&nbsp; <i>(photo by <a href="https://unsplash.com/@chuttersnap?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">chuttersnap</a>)</i></p>
 
 Ideally, when a test fails, the name of the test should be all a developer needs to pinpoint the problem in code. As elaborated below (_Test Coverage_), we want our tests to act like lots of small, independent, precise status lights.
 
@@ -106,7 +110,7 @@ Think about the term `test coverage` literally. Not with percentages, but imagin
 
 ![That's one test...]({{ site.url }}/assets/2020-01-16-The-Right-Unit-Test/vlad-tchompalov-green-ant-unsplash.jpg)
 
-**That's one test...** | *Photo by [Vlad Tchompalov](https://unsplash.com/@tchompalov?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)*
+<p align="center"><b>That's one test...</b> &nbsp;&nbsp;&nbsp;&nbsp; <i>(photo by <a href="https://unsplash.com/@tchompalov?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Vlad Tchompalov</a>)</i></p>
 
 As soon as one of the ants finds something wrong with the class, it will turn red. We want to write lots of small, independent tests that act like status lights, quickly identifying precisely which part of our functionality is broken.
 
@@ -216,7 +220,7 @@ Writing tests is not about quantity, it's about quality. Essentially we are writ
 
 ![Quality tests save you time]({{ site.url }}/assets/2020-01-16-The-Right-Unit-Test/pierre-bamin-quality-pocket-watch-unsplash.jpg)
 
-<p align="center">Quality tests save you time | <i>Photo by <a href="https://unsplash.com/@bamin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pierre Bamin</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></i></p>
+<p align="center"><b>Quality tests save you time</b> &nbsp;&nbsp;&nbsp;&nbsp; <i>(photo by <a href="https://unsplash.com/@bamin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pierre Bamin</a>)</i></p>
 
 When a developer treats their tests as a second class citizen, their tests will be second class. It's that simple. You should be as proud of your tests as your production code. Put the time in to make your unit tests great. Just as great code is easy to extend, great tests are easy to augment.
 
