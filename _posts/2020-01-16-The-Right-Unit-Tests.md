@@ -11,8 +11,6 @@ This isn't a post to teach the basics of unit testing on iOS. It's designed for 
 
 <p align="center"><b>Unit testing can get messy</b><br><i>(photo by <a href="https://unsplash.com/@alicegrace?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Alice Dietrich</a>)</i></p>
 
-&nbsp;
-
 Just like code, tests should be clear, concise and simple for everyone to understand. It should require no effort to understand a test, even for someone who is not the author, and does not have the full context.
 
 This post is all about getting back to fundamentals and understanding what's most valuable for unit tests.
@@ -21,11 +19,9 @@ This post is all about getting back to fundamentals and understanding what's mos
 
 # Tools
 
-&nbsp;
-
 ![All The Tools!]({{ site.url }}/assets/2020-01-16-The-Right-Unit-Test/cesar-carlevarino-aragon-tools-unsplash.jpg)
 
-<p align="center"><b>All The Tools!</b>  &nbsp;&nbsp;&nbsp;&nbsp; <i>(photo by <a href="https://unsplash.com/@carlevarino?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Cesar Carlevarino Aragon</a>)</i></p>
+<p align="center"><b>All The Tools!</b><br><i>(photo by <a href="https://unsplash.com/@carlevarino?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Cesar Carlevarino Aragon</a>)</i></p>
 
 &nbsp;
 
@@ -71,7 +67,7 @@ It's important to remember that good tests have different characteristics to cod
 
 ![We don't always need things to be DRY]({{ site.url }}/assets/2020-01-16-The-Right-Unit-Test/erik-witsoe-dry-washing-unsplash.jpg)
 
-<p align="center"><b>We don't always need things to be DRY</b>  &nbsp;&nbsp;&nbsp;&nbsp; <i>(photo by <a href="https://unsplash.com/@ewitsoe?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Erik Witsoe</a>)</i></p>
+<p align="center"><b>We don't always need things to be DRY</b><br><i>(photo by <a href="https://unsplash.com/@ewitsoe?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Erik Witsoe</a>)</i></p>
 
 &nbsp;
 
@@ -96,11 +92,9 @@ This sounds so obvious, but so many times I've broken code only to find an exist
 
 # 4. Test Naming
 
-&nbsp;
-
 ![Names are important]({{ site.url }}/assets/2020-01-16-The-Right-Unit-Test/chuttersnap-names-unsplash.jpg)
 
-<p align="center"><b>Names are important</b>  &nbsp;&nbsp;&nbsp;&nbsp; <i>(photo by <a href="https://unsplash.com/@chuttersnap?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">chuttersnap</a>)</i></p>
+<p align="center"><b>Names are important</b><br><i>(photo by <a href="https://unsplash.com/@chuttersnap?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">chuttersnap</a>)</i></p>
 
 &nbsp;
 
@@ -128,7 +122,7 @@ Think about the term `test coverage` literally. Not with percentages, but imagin
 
 ![That's one test...]({{ site.url }}/assets/2020-01-16-The-Right-Unit-Test/vlad-tchompalov-green-ant-unsplash.jpg)
 
-<p align="center"><b>That's one test...</b> &nbsp;&nbsp;&nbsp;&nbsp; <i>(photo by <a href="https://unsplash.com/@tchompalov?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Vlad Tchompalov</a>)</i></p>
+<p align="center"><b>That's one test...</b><br><i>(photo by <a href="https://unsplash.com/@tchompalov?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Vlad Tchompalov</a>)</i></p>
 
 &nbsp;
 
@@ -238,7 +232,7 @@ Writing tests is not about quantity, it's about quality. Essentially we are writ
 
 ![Quality tests save you time]({{ site.url }}/assets/2020-01-16-The-Right-Unit-Test/pierre-bamin-quality-pocket-watch-unsplash.jpg)
 
-<p align="center"><b>Quality tests save you time</b> &nbsp;&nbsp;&nbsp;&nbsp; <i>(photo by <a href="https://unsplash.com/@bamin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pierre Bamin</a>)</i></p>
+<p align="center"><b>Quality tests save you time</b><br><i>(photo by <a href="https://unsplash.com/@bamin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pierre Bamin</a>)</i></p>
 
 &nbsp;
 
