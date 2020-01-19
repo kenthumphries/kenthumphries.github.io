@@ -17,7 +17,7 @@ Just like code, tests should be clear, concise and simple for everyone to unders
 
 This post is all about getting back to fundamentals and understanding what's most valuable for unit tests.
 
-*[Jump to the Summary](#summary)*
+*[Jump to the Summary](#summary), or read this article [on Medium](https://medium.com/@kentios/the-right-unit-tests-for-ios-7f9422ff7081?source=friends_link&sk=2242e561e92989c1c032477e99563a97)*
 
 # Tools
 
