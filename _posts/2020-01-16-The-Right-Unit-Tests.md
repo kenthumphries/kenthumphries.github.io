@@ -27,7 +27,7 @@ This post is all about getting back to fundamentals and understanding what's mos
 
 &nbsp;
 
-There are some great tools for unit testing iOS in Swift (for example [Quick](https://github.com/Quick/Quick)/[Nimble](https://github.com/Quick/Nimble), [SwiftyMocky](https://github.com/MakeAWishFoundation/SwiftyMocky), [Snapshot-testing](https://github.com/pointfreeco/swift-snapshot-testing)). I encourage you to use them! However, even with great tools, developers can still write bad tests. As an example, Quick (or any [BDD](https://en.wikipedia.org/wiki/Behavior-driven_development) franework) improves test naming & readability, but it's important to first understand _why_ better naming is important. To explain these fundamental ideas, let's just talk about plain vanilla XCTests.
+There are some great tools for unit testing iOS in Swift (for example [Quick](https://github.com/Quick/Quick)/[Nimble](https://github.com/Quick/Nimble), [SwiftyMocky](https://github.com/MakeAWishFoundation/SwiftyMocky), [Snapshot-testing](https://github.com/pointfreeco/swift-snapshot-testing)). I encourage you to use them! However, even with great tools, developers can still write bad tests. As an example, Quick (or any [BDD](https://en.wikipedia.org/wiki/Behavior-driven_development) framework) improves test naming & readability, but it's important to first understand _why_ better naming is important. To explain these fundamental ideas, let's just talk about plain vanilla XCTests.
 
 # FIRST Things First
 
