@@ -51,17 +51,17 @@ Here are practical tips to improve the quality of your tests, taking FIRST into 
 
 Keep your tests short.
 
-Please.
+Really short.
 
-A long test is complex. Code correctness and testability are intertwined. Dirty code smells often cause bugs in their own right, but `this code is difficult to test` is reason enough to refactor. If you, the author, find it difficult to test your own code, think about someone wanting to refactor this code in 6 months time.
+A long test is a good indicator of smelly code. That is, testability and code complexity are intertwined. If your code is complicated, it's likely that it will become a source of bugs. The same goes for tests - a complex test is less likely to catch a bug. Thinking "hmm, this code is difficult to test" should be reason enough to refactor your code. If you, the author, find it difficult to test your own code now, think about someone wanting to refactor this code in 6 months time.
 
 When tests are complex or long, it is almost certain that code can be further improved.
 
-**Try to keep your tests to 10* logical statements or fewer!**  
+**Try to keep your tests to 10 logical statements or fewer**
 
-**choose any number that increases your test quality over time*
+*(choose any number that increases your test quality over time)*
 
-# 2. Test Quality != Code Quality
+# 2. Test Quality ≠ Code Quality
 
 It's important to remember that good tests have different characteristics to code. A former colleague spent countless PR reviews teaching me that **shared** test utilities (mocks, convenience factories, comparators) are dangerous. As developers, we learn the [DRY](https://wikipedia.org/wiki/Don't_Repeat_Yourself) principle at birth. But, as FIRST shows, isolation is actually a more important quality for tests.
 
@@ -100,9 +100,7 @@ This sounds so obvious, but so many times I've broken code only to find an exist
 
 &nbsp;
 
-Ideally, when a test fails, the name of the test should be all a developer needs to pinpoint the problem in code. As elaborated below (_Test Coverage_), we want our tests to act like lots of small, independent, precise status lights.
-
-Compare two different test names for the same test:
+Ideally, when a test fails, the name of the test should be all a developer needs to pinpoint the problem in code. Compare two different test names for the same test:
 - `testMyMethodResponses()`
 - `test_myMethod_withFriday_returnsSmile()`
 
@@ -136,7 +134,7 @@ If all the ants were to turn red at the same time, they would not help pinpoint 
 
 # 6. Code Safety
 
-If we continue the ant analogy, the sweetest parts of each class should have the most ants. That is, you should focus your testing on methods that are more *safety critical*.
+If we continue the ant analogy, the sweetest parts of each class should have the most ants (🍰 ❤️ 🐜🐜🐜). That is, you should focus your testing on methods that are more *safety critical*.
 
 What does *safety critical* code mean? Focus on testing the parts of your class that *could*:
 
